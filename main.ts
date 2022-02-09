@@ -8,6 +8,17 @@ radio.onReceivedNumber(function (receivedNumber) {
             . # # # .
             . . . . .
             `)
+        basic.pause(1500)
+        if (receivedNumber == 1) {
+            basic.showIcon(IconNames.No)
+            radio.sendNumber(6)
+        } else if (receivedNumber == 1) {
+            basic.showIcon(IconNames.Sad)
+            radio.sendNumber(4)
+        } else {
+            basic.showIcon(IconNames.Happy)
+            radio.sendNumber(5)
+        }
     } else if (Jugada2 == 2) {
         basic.showLeds(`
             # # # # #
@@ -16,6 +27,17 @@ radio.onReceivedNumber(function (receivedNumber) {
             # . . . #
             # # # # #
             `)
+        basic.pause(1500)
+        if (receivedNumber == 1) {
+            basic.showIcon(IconNames.Happy)
+            radio.sendNumber(5)
+        } else if (receivedNumber == 1) {
+            basic.showIcon(IconNames.No)
+            radio.sendNumber(6)
+        } else {
+            basic.showIcon(IconNames.Sad)
+            radio.sendNumber(4)
+        }
     } else {
         basic.showLeds(`
             # . . . #
@@ -24,6 +46,17 @@ radio.onReceivedNumber(function (receivedNumber) {
             # # . # #
             # # . # #
             `)
+        basic.pause(1500)
+        if (receivedNumber == 1) {
+            basic.showIcon(IconNames.Sad)
+            radio.sendNumber(4)
+        } else if (receivedNumber == 1) {
+            basic.showIcon(IconNames.Happy)
+            radio.sendNumber(5)
+        } else {
+            basic.showIcon(IconNames.No)
+            radio.sendNumber(6)
+        }
     }
 })
 input.onGesture(Gesture.Shake, function () {
