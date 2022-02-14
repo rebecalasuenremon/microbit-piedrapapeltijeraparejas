@@ -1,3 +1,5 @@
+/**
+ */
 radio.onReceivedNumber(function (receivedNumber) {
     Jugada2 = randint(1, 3)
     if (Jugada2 == 1) {
@@ -38,7 +40,7 @@ radio.onReceivedNumber(function (receivedNumber) {
             basic.showIcon(IconNames.Sad)
             radio.sendNumber(4)
         }
-    } else {
+    } else if (Jugada2 == 3) {
         basic.showLeds(`
             # . . . #
             . # . # .
@@ -57,6 +59,12 @@ radio.onReceivedNumber(function (receivedNumber) {
             basic.showIcon(IconNames.No)
             radio.sendNumber(6)
         }
+    } else if (receivedNumber == 4) {
+        basic.showIcon(IconNames.Happy)
+    } else if (receivedNumber == 4) {
+        basic.showIcon(IconNames.Sad)
+    } else {
+        basic.showIcon(IconNames.No)
     }
 })
 input.onGesture(Gesture.Shake, function () {
